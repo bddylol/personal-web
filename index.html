@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        <h2 class="header">buddy3.ml</h2>
+        <h2 class="header" id="header">buddy3.ml</h2>
         <hr />
         <div class="content">
             <div class="row">
@@ -47,21 +47,40 @@
                 </div>
             </div>
         </div>
-<!--         <div class="footer">
-            <h3>Tools & Languages I use and know:</h3>
-            <ul class="footer-list">
-                <li><i class="devicon-nodejs-plain"></i> NodeJS</li>
-                <li><i class="devicon-python-plain"></i> Python</li>
-                <li><i class="devicon-html5-plain"></i> HTML5</li>
-                <li><i class="devicon-css3-plain"></i> CSS3</li>
-                <li><i class="devicon-discordjs-plain"></i> DJS</li>
-                <li><i class="devicon-express-original"></i> EXPRESSJS</li>
-                <li><i class="devicon-csharp-plain"></i> CSHARP</li>
-                <li><i class="devicon-lua-plain"></i> LUA</li>
-                <li><i class="devicon-bash-plain"></i> BASH</li>
-                <li><i class="devicon-vscode-plain"></i> VSCode</li>
-                <li><i class="devicon-replit-plain"></i> REPLIT</li>
-            </ul>
-        </div> -->
+      <script>
+        let _ = document.getElementById("header")
+        let __ = document.body
+        let ___ = document.getElementById("themelogo")
+        
+        // setInterval(function() {
+        //     if(__.className == "dark") {
+        //     ___.classList.remove("fa-sun")
+        //     ___.style.color = "#fff"
+        //     ___.classList.add("fa-moon")
+        //   } else {
+        //     ___.classList.remove("fa-moon")
+        //     ___.style.color = "#000"
+        //     ___.classList.add("fa-sun")
+        //   }
+        // }, 100)
+        
+        if(localStorage.getItem('theme') == "dark") {
+          __.classList.add("dark")
+        } else {
+          __.classList.add("light")
+        }
+        
+        _.addEventListener("click", (e) => {
+          if(__.className == "light") {
+            __.classList.remove('light')
+            localStorage.setItem('theme', 'dark')
+            __.classList.add('dark')
+          } else {
+            __.classList.remove('dark')
+            localStorage.setItem('theme', 'light')
+            __.classList.add('light')
+          }
+        });
+      </script>
     </body>
 </html>

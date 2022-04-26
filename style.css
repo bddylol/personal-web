@@ -4,14 +4,28 @@
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
-    color: white;
+  transition: all 100ms;
 }
 
-body {
+.dark {
     background-color: #040a0f;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.dark * {
+  color: white!important;
+}
+.light {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.light * {
+  color: black!important;
 }
 
 .content {
